@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="sensor detail container"
+            android:id="@+id/sensor_name"
+            android:layout_alignParentLeft="true"  />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New ToggleButton"
+            android:layout_alignParentRight="true"
+            android:id="@+id/sensor_toggle_button" />
+    </RelativeLayout>
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="X Value:"
+                android:id="@+id/sensor_value_x_label"
+                android:layout_alignParentLeft="true"  />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sensor_value_x"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_alignBottom="@+id/sensor_value_x_label"
+                android:layout_alignParentRight="true"
+                  />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Y Value:"
+                android:id="@+id/sensor_value_y_label"
+                android:layout_alignParentLeft="true"  />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sensor_value_y"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_alignBottom="@+id/sensor_value_y_label"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Z Value:"
+                android:id="@+id/sensor_value_z_label"
+                android:layout_alignParentLeft="true"  />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/sensor_value_z"
+                android:layout_alignBottom="@+id/sensor_value_z_label"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <com.gc.materialdesign.views.Slider
+            android:id="@+id/sensor_sensitivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E88E5"
+            materialdesign:max="1"
+            materialdesign:min="20"
+            materialdesign:showNumberIndicator="true"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Refresh Graph"
+            android:id="@+id/sensor_start"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/line_chart_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
